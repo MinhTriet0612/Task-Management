@@ -3,9 +3,20 @@
 //
 
 #include "UserService.h"
+#include "../repository/UserRepository.h"
 
 UserService::UserService() {
 }
 
-//UserService::UserService(UserRepository userRepository) {
-//    this->userRepository = userRepository;
+
+bool UserService::IsUserExist(std::string username) {
+    return this->userRepository.GetUserByUsername(username) != nullptr;
+}
+
+void UserService::AddUser(User user) {
+    if (UserService::IsUserExist(user.getUserName())) {
+        std::cout << "User already exists" << std::endl;
+    } else {
+        userRepository.AddUser(user);
+    }
+}

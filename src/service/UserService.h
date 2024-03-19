@@ -6,8 +6,10 @@
 #define UNTITLED_USERSERVICE_H
 
 #include "../model/User.h"
-
+#include "../repository/UserRepository.h"
 class UserService {
+private:
+    UserRepository userRepository = UserRepository();
 public:
     UserService();
     void AddUser(User user);
@@ -17,6 +19,7 @@ public:
     std::vector<User*> GetAllUsers();
     bool IsUserExist(User user);
     bool IsUserExist(std::string username);
+    UserRepository getUserRepository();
 };
 
 

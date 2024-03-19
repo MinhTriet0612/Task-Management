@@ -19,9 +19,11 @@ public:
 
     void UpdateUser(User user);
 
-    User* GetUserById(int id);
+    User *GetUserById(int id);
 
-    std::vector<User*> GetAllUsers();
+    User *GetUserByUsername(std::string username);
+
+    std::vector<User *> GetAllUsers();
 
     void Save();
 

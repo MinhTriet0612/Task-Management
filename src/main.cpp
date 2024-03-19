@@ -12,6 +12,7 @@
 #include "./repository/TaskRepository.cpp"
 #include "util/Util.h"
 #include "repository/UserRepository.h"
+#include "service/UserService.h"
 
 Task::Status getStatus(std::string status) {
     if (status == "TODO") {
@@ -66,7 +67,6 @@ int main() {
 //        std::cout << users[i]->getPassword() << std::endl;
 //    }
 
-    userRepository.UpdateUser(User(1, "anh yeu em", "nguyen minh triet"));
 //    TaskRepository taskRepository;
 //    std::vector<Task *> tasks = taskRepository.GetAllTasks();
 //    for (int i = 0; i < tasks.size(); i++) {
@@ -75,4 +75,8 @@ int main() {
 //    std::vector<Task *> tasksById = getTasksById(1);
 //    for (int i = 0; i < tasksById.size(); i++) {
 //        tasksById[i]->display
+    User *user = userRepository.GetUserByUsername("anh yeu em");
+
+    UserService userService;
+    std::cout << userService.IsUserExist("anh yeu em");
 }

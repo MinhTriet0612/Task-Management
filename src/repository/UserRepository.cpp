@@ -126,6 +126,29 @@ std::vector<User *> UserRepository::GetAllUsers() {
     return users;
 }
 
+User* UserRepository::GetUserByUsername(std::string username) {
+    sql::Driver *driver;
+    sql::Connection *con;
+    sql::Statement *stmt;
+    sql::ResultSet *res;
+    driver = get_driver_instance();
+    con = driver->connect("tcp://127.0.0.1:3306",
+                          "root",
+                          "");
+
+    con->setSchema("FullStackApp");
+    stmt = con->createStatement();
+    res = stmt->executeQuery("SELECT * FROM user WHERE username = '" + username + "'");
+
+    User *user = new User();
+    while (res->next()) {
+        user->setId(res->getInt("id"));
+        user->setUserName(res->getString("username"));
+        user->setPassword(res->getString("password"));
+    }
+    return user;
+}
+
 void UserRepository::Save() {
 }
 
