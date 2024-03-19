@@ -3,15 +3,19 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled main.cpp
-        model/Task.cpp
-        model/Task.h
-        model/User.cpp
-        model/User.h
-        service/TaskService.cpp
-        service/TaskService.h
-        util/Util.cpp
-        util/Util.h
+add_executable(untitled src/main.cpp
+        src/model/Task.cpp
+        src/model/Task.h
+        src/model/User.cpp
+        src/model/User.h
+        src/service/TaskService.cpp
+        src/service/TaskService.h
+        src/util/Util.cpp
+        src/util/Util.h
+        src/service/UserService.cpp
+        src/service/UserService.h
+        src/repository/UserRepository.cpp
+        src/repository/UserRepository.h
 )
 
 # configure how to connect to the mysql

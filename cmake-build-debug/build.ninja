@@ -49,40 +49,54 @@ cmake_ninja_workdir = /home/minhtriet/CLionProjects/untitled/cmake-build-debug/
 
 build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
 
-build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/main.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/main.cpp.o.d
+build CMakeFiles/untitled.dir/src/main.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/main.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I/usr/include/mysql
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src
 
-build CMakeFiles/untitled.dir/model/Task.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/model/Task.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/model/Task.cpp.o.d
+build CMakeFiles/untitled.dir/src/model/Task.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/model/Task.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/model/Task.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I/usr/include/mysql
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/model
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/model
 
-build CMakeFiles/untitled.dir/model/User.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/model/User.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/model/User.cpp.o.d
+build CMakeFiles/untitled.dir/src/model/User.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/model/User.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/model/User.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I/usr/include/mysql
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/model
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/model
 
-build CMakeFiles/untitled.dir/service/TaskService.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/service/TaskService.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/service/TaskService.cpp.o.d
+build CMakeFiles/untitled.dir/src/service/TaskService.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/service/TaskService.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/service/TaskService.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I/usr/include/mysql
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/service
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/service
 
-build CMakeFiles/untitled.dir/util/Util.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/util/Util.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/util/Util.cpp.o.d
+build CMakeFiles/untitled.dir/src/util/Util.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/util/Util.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/util/Util.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I/usr/include/mysql
   OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/util
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/util
+
+build CMakeFiles/untitled.dir/src/service/UserService.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/service/UserService.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/service/UserService.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/usr/include/mysql
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/service
+
+build CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/repository/UserRepository.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/usr/include/mysql
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/repository
 
 
 # =============================================================================
@@ -92,7 +106,7 @@ build CMakeFiles/untitled.dir/util/Util.cpp.o: CXX_COMPILER__untitled_unscanned_
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/model/Task.cpp.o CMakeFiles/untitled.dir/model/User.cpp.o CMakeFiles/untitled.dir/service/TaskService.cpp.o CMakeFiles/untitled.dir/util/Util.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/model/Task.cpp.o CMakeFiles/untitled.dir/src/model/User.cpp.o CMakeFiles/untitled.dir/src/service/TaskService.cpp.o CMakeFiles/untitled.dir/src/util/Util.cpp.o CMakeFiles/untitled.dir/src/service/UserService.cpp.o CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lmysqlclient  -lmysqlcppconn
   OBJECT_DIR = CMakeFiles/untitled.dir

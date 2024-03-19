@@ -16,6 +16,8 @@ private:
     std::vector<Task*> tasksList;
 
 public:
+    User();
+    User(int id, const std::string userName, const std::string password);
     int getId() const;
 
     void setId(int id);

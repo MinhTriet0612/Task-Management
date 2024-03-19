@@ -28,7 +28,7 @@
 //
 //    std::vector<Task> getTasksByPriority(Task::Priority priority);
 //
-//    std::vector<Task> getTasksByDate(Task::Date date);
+//    std::vector<Task> getTasksByDate(Task::Date startday);
 //
 //    std::vector<Task> getTasksByDateRange(Task::Date startDate, Task::Date endDate);
 //

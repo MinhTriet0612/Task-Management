@@ -8,9 +8,11 @@
 #include "cppconn/driver.h"
 #include "cppconn/connection.h"
 #include "cppconn/metadata.h"
-#include "model/Task.h"
-#include "repository/TaskRepository.cpp"
+#include "./model/Task.h"
+#include "./repository/TaskRepository.cpp"
 #include "util/Util.h"
+#include "repository/UserRepository.h"
+
 Task::Status getStatus(std::string status) {
     if (status == "TODO") {
         return Task::Status::TODO;
@@ -56,6 +58,21 @@ std::vector<Task *> getTasksById(int id) {
 }
 
 int main() {
-    Task::Date date = Util::GetCurrentDate();
-    std::cout << date.day << "/" << date.month << "/" << date.year << std::endl;
+    UserRepository userRepository;
+    std::vector<User *> users = userRepository.GetAllUsers();
+//    for (int i = 0; i < users.size(); i++) {
+//        std::cout << users[i]->getId() << std::endl;
+//        std::cout << users[i]->getUserName() << std::endl;
+//        std::cout << users[i]->getPassword() << std::endl;
+//    }
+
+    userRepository.UpdateUser(User(1, "anh yeu em", "nguyen minh triet"));
+//    TaskRepository taskRepository;
+//    std::vector<Task *> tasks = taskRepository.GetAllTasks();
+//    for (int i = 0; i < tasks.size(); i++) {
+//        tasks[i]->display();
+//    }
+//    std::vector<Task *> tasksById = getTasksById(1);
+//    for (int i = 0; i < tasksById.size(); i++) {
+//        tasksById[i]->display
 }

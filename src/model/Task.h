@@ -34,7 +34,7 @@ public:
 
     Task();
 
-    Task(int userId, std::string title, Date date, std::string description);
+    Task(int userId, std::string title, Date startDate, std::string description);
 
     int getUserId() const;
 
@@ -44,30 +44,34 @@ public:
 
     void setTitle(const std::string &title);
 
-    const Date &getDate() const;
+    const Date &getStartDate() const;
 
-    void setDate(const Date &date);
+    void setStartDate(const Date &startDate);
 
-    const std::string &getDescription() const;
+    const Date &getDeadline() const;
 
-    void setDescription(const std::string &description);
+    void setDeadline(const Date &deadline);
+
+    const std::string &getNote() const;
+
+    void setNote(const std::string &note);
 
     Status getStatus() const;
 
-    void setStatus(std::string status);
+    void setStatus(Status status);
 
     Priority getPriority() const;
 
-    void setPriority(std::string priority);
+    void setPriority(Priority priority);
 
-    void display() const;
-
+    void display();
 
 private:
     int user_id;
     std::string title;
-    struct Date date;
-    std::string description;
+    struct Date startDate;
+    struct Date deadline;
+    std::string note;
     enum Status status;
     enum Priority priority;
 };

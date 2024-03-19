@@ -1,5 +1,13 @@
 #include "User.h"
 
+User::User() {}
+
+User::User(int id, const std::string userName, const std::string password) {
+    this->id = id;
+    this->userName = userName;
+    this->password = password;
+}
+
 int User::getId() const {
     return id;
 }

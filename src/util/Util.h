@@ -10,8 +10,8 @@
 class Util {
 public:
     static Task::Date GetCurrentDate();
-    Task::Date FormatDate(Task::Date currentData);
-    bool CompareDate(Task::Date current, Task::Date data);
+    static Task::Date FormatDate(Task::Date currentData);
+    static bool CompareDate(Task::Date current, Task::Date data);
 };
 
 
