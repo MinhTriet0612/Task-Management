@@ -51,7 +51,8 @@
 			[
 				0,
 				1,
-				3
+				3,
+				5
 			]
 		}
 	],
@@ -86,7 +87,8 @@
 			[
 				0,
 				1,
-				3
+				3,
+				5
 			]
 		},
 		{
@@ -94,7 +96,8 @@
 			"sourceIndexes" : 
 			[
 				2,
-				4
+				4,
+				6
 			]
 		}
 	],
@@ -114,18 +117,29 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "model/header/Task.h",
+			"path" : "model/Task.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "model/header/TaskManager.cpp",
+			"path" : "model/User.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "model/header/TaskManager.h",
+			"path" : "model/User.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "service/TaskService.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "service/TaskService.h",
 			"sourceGroupIndex" : 1
 		}
 	],
