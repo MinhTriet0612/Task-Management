@@ -2,7 +2,10 @@
 // Created by minhtriet on 19/03/2024.
 //
 
+#include <cppconn/sqlstring.h>
 #include "Task.h"
+#include "mysql_connection.h"
+#include <cppconn/driver.h>
 
 Task::Task() {}
 
@@ -13,6 +16,8 @@ void Task::display() const {
     std::cout << "Description: " << this->getDescription() << std::endl;
     std::cout << "Status: " << this->getStatus() << std::endl;
     std::cout << "Priority: " << this->getPriority() << std::endl;
+    std::cout<< "User ID: " << this->getUserId() << std::endl;
+    std::cout<< "-----------------------------" << std::endl;
 }
 
 Task::Task(int userId, std::string title, Date date, std::string description) {
@@ -20,7 +25,7 @@ Task::Task(int userId, std::string title, Date date, std::string description) {
     this->title = title;
     this->date = date;
     this->description = description;
-    this->status = static_cast<Task::Status>(0);
+    this->status = TODO;
     this->priority = static_cast<Task::Priority>(0);
 }
 
@@ -60,15 +65,15 @@ Task::Status Task::getStatus() const {
     return status;
 }
 
-void Task::setStatus(Task::Status status) {
-    Task::status = status;
+void Task::setStatus(std::string status) {
+//    Task::status = status;
 }
 
 Task::Priority Task::getPriority() const {
     return priority;
 }
 
-void Task::setPriority(Task::Priority priority) {
-    Task::priority = priority;
+void Task::setPriority(std::string priority) {
+//    Task::priority = priority;
 }
 

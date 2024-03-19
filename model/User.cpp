@@ -1,15 +1,11 @@
-//
-// Created by minhtriet on 19/03/2024.
-//
-
 #include "User.h"
 
-const std::vector<int> &User::getTaskId() const {
-    return taskID;
+int User::getId() const {
+    return id;
 }
 
-void User::setTaskId(const std::vector<int> &taskId) {
-    taskID = taskId;
+void User::setId(int id) {
+    User::id = id;
 }
 
 const std::string &User::getUserName() const {
@@ -28,11 +24,18 @@ void User::setPassword(const std::string &password) {
     User::password = password;
 }
 
-User::User(int id, std::string userName, std::string password, std::vector<int> taskId) {
-    this->password = password;
-    this->taskID = taskId;
-    this->userName = userName;
-    this->id = id;
+const std::vector<Task *> &User::getTasksList() const {
+    return tasksList;
 }
 
-User::User() {}
+void User::setTasksList(const std::vector<Task *> &tasksList) {
+    User::tasksList = tasksList;
+}
+
+void User::addTask(Task *task) {
+    if(this->tasksList.empty())
+    {
+        this->tasksList = std::vector<Task*>();
+    }
+    this->tasksList.push_back(task);
+}

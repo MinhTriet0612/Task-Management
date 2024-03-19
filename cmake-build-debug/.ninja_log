@@ -1,9 +1,14 @@
 # ninja log v5
-1	361	1710845708327714623	CMakeFiles/untitled.dir/main.cpp.o	4c8d1b671f57d81e
-0	19	1710845761100486276	build.ninja	b82a0c44633d44ab
+0	750	1710863879662404658	CMakeFiles/untitled.dir/main.cpp.o	363893439c486593
+1	18	1710851468075470280	CMakeFiles/untitled.dir/service/TaskService.cpp.o	e5e9ba12e6630582
+0	22	1710864715513121145	build.ninja	b82a0c44633d44ab
 1	12	1710843196778401796	CMakeFiles/untitled.dir/model/TaskManager.cpp.o	868776ac8aa9ece3
-1	391	1710845708355715046	CMakeFiles/untitled.dir/model/User.cpp.o	59fe290939c8f3d9
-391	466	1710845708431716195	untitled	e14823303dbc938e
+2	443	1710861518812945038	CMakeFiles/untitled.dir/model/User.cpp.o	6759cc027b311b75
+750	842	1710863879754404193	untitled	e19f5dd8b3b3fb07
 1	344	1710842910027146282	CMakeFiles/untitled.dir/model/Model/Task.cpp.o	89af545957b0d81f
 1	16	1710842849380403439	CMakeFiles/untitled.dir/model/Model/TaskManager.cpp.o	3c8edd7c8e5d3bdf
-1	350	1710845708315714442	CMakeFiles/untitled.dir/model/Task.cpp.o	d862411b2c86a60c
+1	714	1710861891674223956	CMakeFiles/untitled.dir/model/Task.cpp.o	6c95cc74bf387ee
+1	16	1710849621796438289	CMakeFiles/untitled.dir/Repository/TaskRepository.cpp.o	7aa314e537b69e43
+1	367	1710865270271714640	CMakeFiles/untitled.dir/util/Util.cpp.o	322fc68a4c6e412e
+1	884	1710865270787713141	CMakeFiles/untitled.dir/main.cpp.o	363893439c486593
+884	983	1710865270887712851	untitled	a101a51c62f8a49e

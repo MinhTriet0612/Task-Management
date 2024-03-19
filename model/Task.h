@@ -21,7 +21,7 @@ public:
     };
 
     enum Priority {
-        IN_TODAY,
+        IN_DAY,
         IN_WEEK,
         IN_MONTH,
     };
@@ -54,11 +54,11 @@ public:
 
     Status getStatus() const;
 
-    void setStatus(Status status);
+    void setStatus(std::string status);
 
     Priority getPriority() const;
 
-    void setPriority(Priority priority);
+    void setPriority(std::string priority);
 
     void display() const;
 

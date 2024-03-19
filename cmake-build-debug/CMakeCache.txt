@@ -215,6 +215,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//Path to a library.
+pkgcfg_lib_MYSQL_mysqlclient:FILEPATH=/usr/lib/x86_64-linux-gnu/libmysqlclient.so
+
 //Value Computed by CMake
 untitled_BINARY_DIR:STATIC=/home/minhtriet/CLionProjects/untitled/cmake-build-debug
 
@@ -370,6 +379,52 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
+MYSQL_CFLAGS:INTERNAL=-I/usr/include/mysql
+MYSQL_CFLAGS_I:INTERNAL=
+MYSQL_CFLAGS_OTHER:INTERNAL=
+MYSQL_FOUND:INTERNAL=1
+MYSQL_INCLUDEDIR:INTERNAL=/usr/include/mysql
+MYSQL_INCLUDE_DIRS:INTERNAL=/usr/include/mysql
+MYSQL_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lmysqlclient
+MYSQL_LDFLAGS_OTHER:INTERNAL=
+MYSQL_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+MYSQL_LIBRARIES:INTERNAL=mysqlclient
+MYSQL_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+MYSQL_LIBS:INTERNAL=
+MYSQL_LIBS_L:INTERNAL=
+MYSQL_LIBS_OTHER:INTERNAL=
+MYSQL_LIBS_PATHS:INTERNAL=
+MYSQL_MODULE_NAME:INTERNAL=mysqlclient
+MYSQL_PREFIX:INTERNAL=/usr
+MYSQL_STATIC_CFLAGS:INTERNAL=-I/usr/include/mysql
+MYSQL_STATIC_CFLAGS_I:INTERNAL=
+MYSQL_STATIC_CFLAGS_OTHER:INTERNAL=
+MYSQL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/mysql
+MYSQL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lmysqlclient;-lpthread;-ldl;-lresolv;-lm;-lrt;-lssl;-lcrypto;-ldl;-pthread
+MYSQL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+MYSQL_STATIC_LIBDIR:INTERNAL=
+MYSQL_STATIC_LIBRARIES:INTERNAL=mysqlclient;pthread;dl;resolv;m;rt;ssl;crypto;dl
+MYSQL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+MYSQL_STATIC_LIBS:INTERNAL=
+MYSQL_STATIC_LIBS_L:INTERNAL=
+MYSQL_STATIC_LIBS_OTHER:INTERNAL=
+MYSQL_STATIC_LIBS_PATHS:INTERNAL=
+MYSQL_VERSION:INTERNAL=21.2.36
+MYSQL_mysqlclient_INCLUDEDIR:INTERNAL=
+MYSQL_mysqlclient_LIBDIR:INTERNAL=
+MYSQL_mysqlclient_PREFIX:INTERNAL=
+MYSQL_mysqlclient_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+__pkg_config_arguments_MYSQL:INTERNAL=REQUIRED;mysqlclient
+__pkg_config_checked_MYSQL:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_MYSQL_mysqlclient
+pkgcfg_lib_MYSQL_mysqlclient-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

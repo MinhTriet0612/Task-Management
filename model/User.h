@@ -1,27 +1,24 @@
-//
-// Created by minhtriet on 19/03/2024.
-//
 
-#ifndef UNTITLED_USER_H
-#define UNTITLED_USER_H
-
+//design a object that have relational Task
+#ifndef FULLSTACKAPP_USER_H
+#define FULLSTACKAPP_USER_H
+#pragma once
+#include <iostream>
+#include <string>
 #include <vector>
-#include "iostream"
-#include "string"
+#include <ctime>
+#include "Task.h"
 class User {
 private:
     int id;
-    std::vector<int> taskID;
     std::string userName;
     std::string password;
+    std::vector<Task*> tasksList;
 
 public:
-    User();
-    User(int id, std::string userName, std::string password, std::vector<int> taskId);
+    int getId() const;
 
-    const std::vector<int> &getTaskId() const;
-
-    void setTaskId(const std::vector<int> &taskId);
+    void setId(int id);
 
     const std::string &getUserName() const;
 
@@ -30,7 +27,13 @@ public:
     const std::string &getPassword() const;
 
     void setPassword(const std::string &password);
+
+    const std::vector<Task *> &getTasksList() const;
+
+    void setTasksList(const std::vector<Task *> &tasksList);
+
+    void addTask(Task* task);
 };
 
 
-#endif //UNTITLED_USER_H
+#endif //FULLSTACKAPP_USER_H
