@@ -8,4 +8,4 @@ Beside some basic features example: Add, Update, Delete. I also add some feature
 C++, MySql
 
 ## Database Design 
-![image](https://github.com/MinhTriet0612/TodoListCpp/assets/90248665/9e84920a-180c-49bc-ae79-cb65cb712f92)
+![Screenshot from 2024-03-20 14-44-53](https://github.com/MinhTriet0612/TodoListCpp/assets/90248665/9e8c52eb-17d8-4b75-91b2-eecedd3a8593)
