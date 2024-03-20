@@ -11,8 +11,6 @@ class UserRepository {
 public:
     UserRepository();
 
-    UserRepository(const std::string &path);
-
     void AddUser(User user);
 
     void RemoveUser(int user_id);
@@ -26,6 +24,9 @@ public:
     std::vector<User *> GetAllUsers();
 
     bool IsUserExist(std::string username);
+
+    User *login(std::string username, std::string password);
+
     void Save();
 
     void Load();

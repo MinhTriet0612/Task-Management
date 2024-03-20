@@ -15,6 +15,7 @@ public:
     void AddUser(User user);
     bool IsUserExist(std::string username);
     void changeUserPassword(int userID, std::string newPassword);
+    User* login(std::string username, std::string password);
 };
 
 

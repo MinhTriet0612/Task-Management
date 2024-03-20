@@ -3,7 +3,6 @@
 //
 
 #include "UserRepository.h"
-#include "../model/User.h"
 #include <cppconn/driver.h>
 #include <cppconn/exception.h>
 #include <cppconn/resultset.h>
@@ -182,4 +181,34 @@ bool UserRepository::IsUserExist(std::string username) {
     delete stmt;
     delete con;
     return isExist;
+}
+
+User *UserRepository::login(std::string username, std::string password) {
+
+    sql::Driver *driver;
+    sql::Connection *con;
+    sql::Statement *stmt;
+    sql::ResultSet *res;
+    driver = get_driver_instance();
+    con = driver->connect("tcp://127.0.0.1:3306",
+                          "root",
+                          "");
+
+    con->setSchema("FullStackApp");
+    stmt = con->createStatement();
+
+    res = stmt->executeQuery(
+            "SELECT * FROM user WHERE username = '" + username + "' AND password = '" + password + "'");
+
+    User *user = new User();
+    while (res->next()) {
+        user->setId(res->getInt("id"));
+        user->setUserName(res->getString("username"));
+        user->setPassword(res->getString("password"));
+    }
+
+    delete res;
+    delete stmt;
+    delete con;
+    return user;
 }

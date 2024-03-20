@@ -7,11 +7,9 @@
 #include <cppconn/exception.h>
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
-//#include "../model/Task.h"
 #include "../util/Util.h"
 
-//TaskRepository::TaskRepository() {
-//}
+
 
 std::vector<Task *> TaskRepository::getTasksByUserId(int userId) {
     sql::Driver *driver;
@@ -49,10 +47,6 @@ void TaskRepository::addTask(Task *task) {
                           "");
     con->setSchema("FullStackApp");
     stmt = con->createStatement();
-//    INSERT INTO task (user_id, title, startDate, note, status, priority, deadline) values(
-//            3, "Nguyen Minh Triet" , '2024-12-12', "di hoc", "TODO", "IN_DAY", '2024-12-12'
-//    )
-//above code is template to inster data
 
     stmt->execute("INSERT INTO task (user_id, title, startDate, note, status, priority, deadline) values(" +
                   std::to_string(task->getUserId()) + ", '" + task->getTitle() + "', '" +
@@ -77,13 +71,15 @@ void TaskRepository::updateTask(Task *task, int userId) {
                           "");
     con->setSchema("FullStackApp");
     stmt = con->createStatement();
-    stmt->execute("UPDATE task SET title = '" + task->getTitle() +
-                  "', start_date = '" + std::to_string(task->getStartDate().year) + "-" +
-                  std::to_string(task->getStartDate().month) + "-" + std::to_string(task->getStartDate().day) +
-                  "', note = '" + task->getNote() + "', status = '" +
+
+    stmt->execute("UPDATE task SET title = '" + task->getTitle() + "', startDate = '" +
+                  std::to_string(task->getStartDate().year) + "-" + std::to_string(task->getStartDate().month) + "-" +
+                  std::to_string(task->getStartDate().day) + "', note = '" + task->getNote() + "', status = '" +
                   Util::ConvertEnumToString(task->getStatus()) + "', priority = '" +
-                  Util::ConvertEnumToString(task->getPriority()) + "' WHERE id = " +
-                  std::to_string(task->getId()) + " AND user_id = " + std::to_string(userId));
+                  Util::ConvertEnumToString(task->getPriority()) + "', deadline = '" +
+                  std::to_string(task->getDeadline().year) + "-" + std::to_string(task->getDeadline().month) + "-" +
+                  std::to_string(task->getDeadline().day) + "' WHERE id = " + std::to_string(task->getId()) +
+                  " AND user_id = " + std::to_string(userId));
 
     delete stmt;
     delete con;
@@ -108,4 +104,32 @@ void TaskRepository::deleteTaskByUserId(int userId, int taskId) {
 TaskRepository::TaskRepository() {
 
 }
+
+Task *TaskRepository::getTaskById(int taskId, int userId) {
+    sql::Driver *driver;
+    sql::Connection *con;
+    sql::Statement *stmt;
+    driver = get_driver_instance();
+    con = driver->connect("tcp://127.0.0.1:3306",
+                          "root",
+                          "");
+    con->setSchema("FullStackApp");
+    stmt = con->createStatement();
+
+    sql::ResultSet *res = stmt->executeQuery(
+            "SELECT * FROM task WHERE id = " + std::to_string(taskId) + " AND user_id = " + std::to_string(userId));
+
+    Task *task = nullptr;
+    if (res->next()) {
+        task = Util::MappingTask(res);
+    }
+
+    delete stmt;
+    delete con;
+    delete res;
+
+    return task;
+}
+
+
 

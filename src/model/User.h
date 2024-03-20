@@ -1,5 +1,4 @@
 
-//design a object that have relational Task
 #ifndef FULLSTACKAPP_USER_H
 #define FULLSTACKAPP_USER_H
 #pragma once

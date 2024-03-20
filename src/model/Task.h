@@ -5,7 +5,6 @@
 #ifndef UNTITLED_TASK_H
 #define UNTITLED_TASK_H
 
-//#pragma comment(lib, "rpcrt4.lib")
 
 #include <iostream>
 #include <string>

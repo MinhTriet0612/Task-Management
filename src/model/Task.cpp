@@ -2,21 +2,21 @@
 // Created by minhtriet on 19/03/2024.
 //
 
-#include <cppconn/sqlstring.h>
 #include "Task.h"
-#include "mysql_connection.h"
-#include <cppconn/driver.h>
+#include "../util/Util.h"
 
 Task::Task() {}
 
-
 void Task::display() {
+    std::cout << "ID: " << this->getId() << std::endl;
     std::cout << "Title: " << this->getTitle() << std::endl;
-    std::cout << "Date: " << this->getStartDate().day << "/" << this->getStartDate().month << "/"
+    std::cout << "StartDate: " << this->getStartDate().day << "/" << this->getStartDate().month << "/"
               << this->getStartDate().year << std::endl;
+    std::cout << "Deadline: " << this->getDeadline().day << "/" << this->getDeadline().month << "/"
+              << this->getDeadline().year << std::endl;
     std::cout << "Note: " << this->getNote() << std::endl;
-    std::cout << "Status: " << this->getStatus() << std::endl;
-    std::cout << "Priority: " << this->getPriority() << std::endl;
+    std::cout << "Status: " << Util::ConvertEnumToString(this->getStatus()) << std::endl;
+    std::cout << "Priority: " << Util::ConvertEnumToString(this->getPriority()) << std::endl;
     std::cout << "User ID: " << this->getUserId() << std::endl;
     std::cout << "-----------------------------" << std::endl;
 }

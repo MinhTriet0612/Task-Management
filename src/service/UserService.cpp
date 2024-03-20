@@ -29,3 +29,7 @@ void UserService::changeUserPassword(int userID, std::string newPassword) {
         std::cout << "User not found" << std::endl;
     }
 }
+
+User *UserService::login(std::string username, std::string password) {
+    return userRepository.login(username, password);
+}
