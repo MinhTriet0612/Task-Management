@@ -86,7 +86,6 @@ Task::Status Util::ConvertStringToStatus(std::string status) {
     }
 }
 
-
 Task::Priority Util::ConvertStringToPriority(std::string priority) {
     std::unordered_map<std::string, Task::Priority> const priorityMap = {
             {"IN_DAY",   Task::IN_DAY},
@@ -113,5 +112,26 @@ Task *Util::MappingTask(sql::ResultSet *res) {
             Util::ConvertStringToPriority(res->getString("priority"))
     );
     task->setUserId(res->getInt("user_id"));
+    task->setNote(
+            res->getString("note")
+    );
+
+//    std::string startDate = res->getString("startDate");
+//    std::string deadline = res->getString("deadline");
+
+//    Task::Date start;
+//    Task::Date end;
+//
+//    start.day = std::stoi(startDate.substr(8, 2));
+//    start.month = std::stoi(startDate.substr(5, 2));
+//    start.year = std::stoi(startDate.substr(0, 4));
+//
+//    end.day = std::stoi(deadline.substr(8, 2));
+//    end.month = std::stoi(deadline.substr(5, 2));
+//    end.year = std::stoi(deadline.substr(0, 4));
+//
+//    task->setStartDate(start);
+//    task->setDeadline(end);
     return task;
 }
+

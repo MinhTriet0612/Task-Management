@@ -34,7 +34,7 @@ public:
 
     Task();
 
-    Task(int userId, std::string title, Date startDate, std::string description);
+    Task(int userId, std::string title, Date startDate, Date deadline, std::string description);
 
     int getUserId() const;
 

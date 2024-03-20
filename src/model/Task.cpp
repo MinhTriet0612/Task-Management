@@ -12,19 +12,21 @@ Task::Task() {}
 
 void Task::display() {
     std::cout << "Title: " << this->getTitle() << std::endl;
-    std::cout << "Date: " << this->getStartDate().day << "/" << this->getStartDate().month << "/" << this->getStartDate().year << std::endl;
+    std::cout << "Date: " << this->getStartDate().day << "/" << this->getStartDate().month << "/"
+              << this->getStartDate().year << std::endl;
     std::cout << "Note: " << this->getNote() << std::endl;
     std::cout << "Status: " << this->getStatus() << std::endl;
     std::cout << "Priority: " << this->getPriority() << std::endl;
-    std::cout<< "User ID: " << this->getUserId() << std::endl;
-    std::cout<< "-----------------------------" << std::endl;
+    std::cout << "User ID: " << this->getUserId() << std::endl;
+    std::cout << "-----------------------------" << std::endl;
 }
 
-Task::Task(int userId, std::string title, Date startDate, std::string note) {
+Task::Task(int userId, std::string title, Date startDate, Date deadline, std::string note) {
     this->user_id = userId;
     this->title = title;
     this->startDate = startDate;
     this->note = note;
+    this->deadline = deadline;
     this->status = TODO;
     this->priority = static_cast<Task::Priority>(0);
 }

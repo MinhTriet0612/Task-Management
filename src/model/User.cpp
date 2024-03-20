@@ -8,6 +8,11 @@ User::User(int id, const std::string userName, const std::string password) {
     this->password = password;
 }
 
+User::User(const std::string userName, const std::string password) {
+    this->userName = userName;
+    this->password = password;
+}
+
 int User::getId() const {
     return id;
 }
@@ -41,9 +46,16 @@ void User::setTasksList(const std::vector<Task *> &tasksList) {
 }
 
 void User::addTask(Task *task) {
-    if(this->tasksList.empty())
-    {
-        this->tasksList = std::vector<Task*>();
+    if (this->tasksList.empty()) {
+        this->tasksList = std::vector<Task *>();
     }
     this->tasksList.push_back(task);
+}
+
+void User::display() {
+    std::cout << "ID: " << this->id << std::endl;
+    std::cout << "User: " << this->userName << std::endl;
+    std::cout << "Password: " << this->password << std::endl;
+    std::cout << "Tasks: " << std::endl;
+    std::cout << "-----------------------------" << std::endl;
 }

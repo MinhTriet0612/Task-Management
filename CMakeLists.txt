@@ -16,6 +16,7 @@ add_executable(untitled src/main.cpp
         src/service/UserService.h
         src/repository/UserRepository.cpp
         src/repository/UserRepository.h
+        src/repository/TaskRepository.cpp
 )
 
 # configure how to connect to the mysql

@@ -18,6 +18,7 @@ private:
 public:
     User();
     User(int id, const std::string userName, const std::string password);
+    User(const std::string userName, const std::string password);
     int getId() const;
 
     void setId(int id);
@@ -35,6 +36,7 @@ public:
     void setTasksList(const std::vector<Task *> &tasksList);
 
     void addTask(Task* task);
+    void display();
 };
 
 

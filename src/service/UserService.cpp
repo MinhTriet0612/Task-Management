@@ -3,14 +3,13 @@
 //
 
 #include "UserService.h"
-#include "../repository/UserRepository.h"
 
 UserService::UserService() {
 }
 
 
 bool UserService::IsUserExist(std::string username) {
-    return this->userRepository.GetUserByUsername(username) != nullptr;
+    return userRepository.IsUserExist(username);
 }
 
 void UserService::AddUser(User user) {
@@ -18,5 +17,15 @@ void UserService::AddUser(User user) {
         std::cout << "User already exists" << std::endl;
     } else {
         userRepository.AddUser(user);
+    }
+}
+
+void UserService::changeUserPassword(int userID, std::string newPassword) {
+    User *user = userRepository.GetUserById(userID);
+    if (user != nullptr) {
+        user->setPassword(newPassword);
+        userRepository.UpdateUser(*user);
+    } else {
+        std::cout << "User not found" << std::endl;
     }
 }

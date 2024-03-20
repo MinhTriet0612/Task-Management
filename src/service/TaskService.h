@@ -1,25 +1,27 @@
-////
-//// Created by minhtriet on 19/03/2024.
-////
 //
-//#ifndef UNTITLED_TASKSERVICE_H
-//#define UNTITLED_TASKSERVICE_H
+// Created by minhtriet on 19/03/2024.
 //
+
+#ifndef UNTITLED_TASKSERVICE_H
+#define UNTITLED_TASKSERVICE_H
+
+#include "../model/Task.h"
+#include "../repository/TaskRepository.h"
+
+
+class TaskService {
+private:
+    TaskRepository taskRepository = TaskRepository();
+public:
+
+    void addTask(Task *task);
 //
-//class TaskService {
-//private:
-//    TaskRepository taskRepository;
-//public:
-//    TaskService();
+//    void updateTask(Task *task, int user_id);
 //
-//    void addTask(Task task);
+//    void deleteTask(int taskId, int user_id);
 //
-//    void updateTask(Task task);
-//
-//    void deleteTask(int taskId);
-//
-//    std::vector<Task> getTasks();
-//
+    std::vector<Task *> getTasks(int user_id);
+
 //    Task getTaskById(int taskId);
 //
 //    std::vector<Task> getTasksByUserId(int userId);
@@ -35,9 +37,9 @@
 //    std::vector<Task> getTasksByDateRangeAndStatus(Task::Date startDate, Task::Date endDate, Task::Status status);
 //
 //    std::vector<Task> getTasksByDateRangeAndPriority(Task::Date startDate, Task::Date endDate, Task::Priority priority);
-//
-//
-//};
-//
-//
-//#endif //UNTITLED_TASKSERVICE_H
+
+
+};
+
+
+#endif //UNTITLED_TASKSERVICE_H

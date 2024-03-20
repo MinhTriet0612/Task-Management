@@ -13,13 +13,8 @@ private:
 public:
     UserService();
     void AddUser(User user);
-    void RemoveUser(User user);
-    void UpdateUser(User user);
-    User* GetUserById(int id);
-    std::vector<User*> GetAllUsers();
-    bool IsUserExist(User user);
     bool IsUserExist(std::string username);
-    UserRepository getUserRepository();
+    void changeUserPassword(int userID, std::string newPassword);
 };
 
 

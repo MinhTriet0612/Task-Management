@@ -25,6 +25,7 @@ public:
 
     std::vector<User *> GetAllUsers();
 
+    bool IsUserExist(std::string username);
     void Save();
 
     void Load();

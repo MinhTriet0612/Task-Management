@@ -98,6 +98,13 @@ build CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/repository
 
+build CMakeFiles/untitled.dir/src/repository/TaskRepository.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/minhtriet/CLionProjects/untitled/src/repository/TaskRepository.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/src/repository/TaskRepository.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/usr/include/mysql
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/src/repository
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -106,7 +113,7 @@ build CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o: CXX_COMPILER_
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/model/Task.cpp.o CMakeFiles/untitled.dir/src/model/User.cpp.o CMakeFiles/untitled.dir/src/service/TaskService.cpp.o CMakeFiles/untitled.dir/src/util/Util.cpp.o CMakeFiles/untitled.dir/src/service/UserService.cpp.o CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/src/main.cpp.o CMakeFiles/untitled.dir/src/model/Task.cpp.o CMakeFiles/untitled.dir/src/model/User.cpp.o CMakeFiles/untitled.dir/src/service/TaskService.cpp.o CMakeFiles/untitled.dir/src/util/Util.cpp.o CMakeFiles/untitled.dir/src/service/UserService.cpp.o CMakeFiles/untitled.dir/src/repository/UserRepository.cpp.o CMakeFiles/untitled.dir/src/repository/TaskRepository.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lmysqlclient  -lmysqlcppconn
   OBJECT_DIR = CMakeFiles/untitled.dir

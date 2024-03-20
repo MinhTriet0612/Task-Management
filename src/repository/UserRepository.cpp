@@ -126,7 +126,7 @@ std::vector<User *> UserRepository::GetAllUsers() {
     return users;
 }
 
-User* UserRepository::GetUserByUsername(std::string username) {
+User *UserRepository::GetUserByUsername(std::string username) {
     sql::Driver *driver;
     sql::Connection *con;
     sql::Statement *stmt;
@@ -146,6 +146,10 @@ User* UserRepository::GetUserByUsername(std::string username) {
         user->setUserName(res->getString("username"));
         user->setPassword(res->getString("password"));
     }
+
+    delete res;
+    delete stmt;
+    delete con;
     return user;
 }
 
@@ -153,4 +157,29 @@ void UserRepository::Save() {
 }
 
 void UserRepository::Load() {
+}
+
+bool UserRepository::IsUserExist(std::string username) {
+
+    sql::Driver *driver;
+    sql::Connection *con;
+    sql::Statement *stmt;
+    sql::ResultSet *res;
+    driver = get_driver_instance();
+    con = driver->connect("tcp://127.0.0.1:3306",
+                          "root",
+                          "");
+
+    con->setSchema("FullStackApp");
+    stmt = con->createStatement();
+    res = stmt->executeQuery("SELECT * FROM user WHERE username = '" + username + "'");
+    bool isExist = false;
+    while (res->next()) {
+        isExist = true;
+    }
+
+    delete res;
+    delete stmt;
+    delete con;
+    return isExist;
 }
