@@ -9,8 +9,6 @@ private:
 
 public:
     TaskRepository();
-    std::vector<Task*> getTaskById(int taskId);
-    std::vector<Task*> getTasks();
     std::vector<Task*> getTasksByUserId(int userId);
     std::vector<Task*> getTasksByStatus(Task::Status status);
     std::vector<Task*> getTasksByPriority(Task::Priority priority);

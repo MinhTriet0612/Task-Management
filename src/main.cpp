@@ -78,5 +78,10 @@ int main() {
     User *user = userRepository.GetUserByUsername("anh yeu em");
 
     UserService userService;
-    std::cout << userService.IsUserExist("anh yeu em");
+    TaskRepository taskRepository;
+    std::vector<Task *> tasks = taskRepository.getTasksByUserId(user->getId());
+
+    for (int i = 0; i < tasks.size(); i++) {
+        tasks[i]->display();
+    }
 }

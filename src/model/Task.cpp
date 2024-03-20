@@ -84,3 +84,11 @@ Task::Priority Task::getPriority() const {
 void Task::setPriority(Task::Priority priority) {
     Task::priority = priority;
 }
+
+int Task::getId() const {
+    return id;
+}
+
+void Task::setId(int id) {
+    Task::id = id;
+}

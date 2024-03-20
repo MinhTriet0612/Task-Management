@@ -67,13 +67,20 @@ public:
     void display();
 
 private:
-    int user_id;
+    int id;
+public:
+    int getId() const;
+
+    void setId(int id);
+
+private:
     std::string title;
     struct Date startDate;
     struct Date deadline;
     std::string note;
     enum Status status;
     enum Priority priority;
+    int user_id;
 };
 
 
