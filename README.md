@@ -2,7 +2,7 @@
 I have just created a todolist project with cpp.
 
 ## Features
-Beside some basic features example: Add, Update, Delete. I also add some features is filter, sort.. 
+Beside some basic features example: Adding, Updating, Deleting. I also added some features is filtering, sorting.. 
 
 ## Technology
 C++, MySql
