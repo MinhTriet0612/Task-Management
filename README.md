@@ -1,5 +1,5 @@
 ## Why is this app being developed?
-I'm don't know how behind the senene of ORM works so i decided to build this app from scratch without ORM framework.
+I'm don't know how behind the sence of ORM works so i decided to build this app from scratch without ORM framework.
 
 ## Features
 Beside some basic features example: Adding, Updating, Deleting. I also added some features is filtering, sorting.. 
